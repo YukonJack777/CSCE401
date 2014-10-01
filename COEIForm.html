@@ -1,140 +1,188 @@
-<!DOCTYPE HTML>
-<HTML>
-	<HEAD>
-		<TITLE></TITLE>
-	
-	</HEAD>
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<head>
+	<title>UAA COE: Internal Order Form</title>
+</head>
 
-	<BODY>
-	<CENTER>
-	
- <FORM CLASS ="COEIFRM" role ="form">
- <CAPTION>UAA College of Engineering, Internal Order Form</CAPTION>
+<H1 style="text-align: center">UAA College of Engineering - Internal Order Form</H1>
+<div class="container" style="margin-top:50px">
+	<form class="form-horizontal">
+		<fieldset>
+ 			<legend>Requester Information</legend>
+ 			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Date Requested</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Date Requested" />
+					</div>
+				</div>
 
- <fieldset>
- <legend>Order Information</legend>
-	<TABLE cellpadding="10">
-		
-	
-	<TFOOT>
-		<TD COLSPAN="6"></TD>
-	<TFOOT>
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Date Needed</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Date Needed" />
+					</div>
+				</div>
 
-	<TBODY>
-	<pre>
-		<TR>
-			<TD class="LeftCol">Date Requested:</TD>
-			<TD>
-					<input type="text" class="form-control" id="usr">
-			</TD>
-			<TD>	Date Needed:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	Fund/Org: </TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-		</TR>
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Requester</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Requester" />
+					</div>
+				</div>
 
-		<TR>
-			<TD class="LeftCol">Vendor:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	Requester: </TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	Account Title:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-		</TR>
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Authorized Name</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Authorized Name" />
+					</div>
+				</div>
+			</div>
 
-		<TR>
-			<TD class="LeftCol">Attn:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	Phone Number: </TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	Document Number:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-		</TR>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Fund/Org #</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Fund/Org #" />
+					</div>
+				</div>
 
-		<TR>
-			<TD class="LeftCol">Address:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	Acct. Bal. OK?: </TD>
-			<TD>	<input type="radio" class="form-control" id="usr"><label>Yes</label>
-					<input type="radio" class="form-control" id="usr"><label>No</label>
-			</TD>
-			<TD>	Supperv. Name:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-		</TR>
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Account Title</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Account Title" />
+					</div>
+				</div>
 
-		<TR>
-			<TD class="LeftCol">City, State, Zip:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	End Bal. OK?: </TD>
-			<TD>	<input type="radio" class="form-control" id="usr"> Yes
-					<input type="radio" class="form-control" id="usr"> No
-			</TD>
-			<TD>	Supperv. Signature:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-		</TR>
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Phone Number</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Phone Number" />
+					</div>
+				</div>
+			</div>
+		</fieldset>
 
-		<TR>
-			<TD class="LeftCol">Vendor Phone:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	Accountng Initial: </TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-			<TD>	Vendor Fax:</TD>
-			<TD>	<input type="text" class="form-control" id="usr"></TD>
-		</TR>
+		<fieldset style="margin-top:20px">
+ 			<legend>Vendor Information</legend>
 
-		<TR colspan ="5">
-		<table>
-			<TD class="LeftCol">Detailed business purpose of purchase:</TD>
-			<TD><textarea rows="4" cols="80">
-			Type here.
-		</textarea>
-	</table>
-		</TR>
-		</pre>
-	<TBODY
-</TABLE>
-<TABLE cellpadding="5">
-	<TR>
-		<TD rowspan="2">Item No.</TD>
-		<TD rowspan="2">Catalog No.</TD>
-		<TD>Check if Materials Ordered Are: </TD>
-		<TD>Hazardous?:</TD>
-		<TD><input type="checkbox" class="form-control" id="usr"></TD>
-		<TD>Radiactive?</TD>
-	<TD><input type="checkbox" class="form-control" id="usr"></TD>
-	<TD rowspan="2">Unit size</TD>
-	<TD rowspan="2">Qty.</TD>
-	<TD rowspan="2">Unit cost:</TD>
-	<TD rowspan="2">Ex. cost:</TD>
-	<TD rowspan="2">Addmin. Only</TD>
-	</TR>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor" />
+					</div>
+				</div>
 
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Attn:</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Attn" />
+					</div>
+				</div>
 
-	<TR>
-		<TD><input type="text" class="form-control" id="usr" maxlength="20" size="20"></TD>
-		<TD ><input type="text" class="form-control" id="usr" maxlength="20" size="20"></TD>
-		<TD>Unit size</TD>
-		<TD>Unit size</TD>
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor Address</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor Address" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor City, State, Zip</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor City, State, Zip" />
+					</div>
+				</div>
 
-	</TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-	<TR></TR>
-</TABLE>
-</fieldset>
-</FORM>
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor Phone Number</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor Phone Number" />
+					</div>
+				</div>
 
-</CENTER>
-</BODY>
-</HTML>
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor Phone Fax</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor Fax Number" />
+					</div>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset style="margin-top:20px">
+ 			<legend>Purchase Information</legend>
+			<div class="form-group">
+				<label for="name" class="col-xs-4 control-label">Detailed Business Purpose of Purchase:</label>
+				<div class="col-xs-8">
+					<textarea class="form-control" rows="3"></textarea>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset style="margin-top:20px">
+ 			<legend>Item Information</legend>
+ 			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Item Number</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Item No." />
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Catalog Number</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Catalog No." />
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="name" class="col-xs-4 control-label">Generic Name & Description (Including Measurements):</label>
+				<div class="col-xs-8">
+					<textarea class="form-control" rows="3"></textarea>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Unit Size</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Unit Size" />
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Quantity</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Quantity" />
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Unit Cost</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Unit Cost" />
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Extended Cost</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" />
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
