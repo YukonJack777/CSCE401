@@ -1,4 +1,5 @@
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <head>
 	<title>UAA COE: Internal Order Form</title>
 </head>
@@ -12,7 +13,7 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Date Requested</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Date Requested" />
+						<input type="text" class="form-control" placeholder="Enter Date Requested" required/>
 					</div>
 				</div>
 
@@ -33,7 +34,7 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Authorized Name</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Authorized Name" />
+						<input type="text" class="form-control" placeholder="Enter Authorized Name" required/>
 					</div>
 				</div>
 			</div>
@@ -42,14 +43,14 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Fund/Org #</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Fund/Org #" />
+						<input type="text" class="form-control" placeholder="Enter Fund/Org #" required/>
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Account Title</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Account Title" />
+						<input type="text" class="form-control" placeholder="Enter Account Title" required/>
 					</div>
 				</div>
 
@@ -69,7 +70,7 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Vendor</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Vendor" />
+						<input type="text" class="form-control" placeholder="Enter Vendor" required/>
 					</div>
 				</div>
 
@@ -117,7 +118,7 @@
 			<div class="form-group">
 				<label for="name" class="col-xs-4 control-label">Detailed Business Purpose of Purchase:</label>
 				<div class="col-xs-8">
-					<textarea class="form-control" rows="3"></textarea>
+					<textarea class="form-control" rows="3" required></textarea>
 				</div>
 			</div>
 		</fieldset>
@@ -128,7 +129,7 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Item Number</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Item No." />
+						<input type="text" class="form-control" placeholder="Enter Item No." required/>
 					</div>
 				</div>
 			</div>
@@ -136,14 +137,14 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Catalog Number</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Catalog No." />
+						<input type="text" class="form-control" placeholder="Enter Catalog No." required/>
 					</div>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="name" class="col-xs-4 control-label">Generic Name & Description (Including Measurements):</label>
 				<div class="col-xs-8">
-					<textarea class="form-control" rows="3"></textarea>
+					<textarea class="form-control" rows="3" required></textarea>
 				</div>
 			</div>
 
@@ -151,7 +152,7 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Unit Size</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Unit Size" />
+						<input type="text" class="form-control" placeholder="Enter Unit Size" required/>
 					</div>
 				</div>
 			</div>
@@ -159,7 +160,7 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Quantity</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Quantity" />
+						<input type="text" class="form-control" placeholder="Enter Quantity" required/>
 					</div>
 				</div>
 			</div>
@@ -168,7 +169,7 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Unit Cost</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Unit Cost" />
+						<input type="text" class="form-control" placeholder="Enter Unit Cost" required/>
 					</div>
 				</div>
 			</div>
@@ -181,6 +182,7 @@
 				</div>
 			</div>
 		</fieldset>
+		<button type="submit" class="btn btn-primary btn-lg" style="margin-top:30px">Submit</button>
 	</form>
 </div>
 
