@@ -1,5 +1,7 @@
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet">
 <head>
 	<title>UAA COE: Internal Order Form</title>
 </head>
@@ -13,21 +15,16 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Date Requested</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Date Requested" required/>
+						<div class="input-group date">
+							<input type="text" class="form-control" placeholder="Enter Date Requested" id="datepicker" required/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						</div>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Date Needed</label>
+					<label for="name" class="col-xs-4 control-label">Fund/Org #</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Date Needed" />
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Requester</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Requester" />
+						<input type="text" class="form-control" placeholder="Enter Fund/Org #" required/>
 					</div>
 				</div>
 
@@ -37,16 +34,27 @@
 						<input type="text" class="form-control" placeholder="Enter Authorized Name" required/>
 					</div>
 				</div>
+
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Requester</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Requester" />
+					</div>
+				</div>
 			</div>
 
 			<div class="col-xs-6">
+
 				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Fund/Org #</label>
+					<label for="name" class="col-xs-4 control-label">Date Needed</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Fund/Org #" required/>
+						<div class="input-group date">
+  							<input type="text" class="form-control" placeholder="Enter Date Needed"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						</div>
 					</div>
 				</div>
 
+				
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Account Title</label>
 					<div class="col-xs-8">
@@ -57,7 +65,7 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Phone Number</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Phone Number" />
+						<input type="tel" class="form-control" placeholder="(###)###-####" pattern="\(\d\d\d\) ?\d\d\d-\d\d\d\d" title='Phone Number (Format: (###)###-####)'/>
 					</div>
 				</div>
 			</div>
@@ -100,14 +108,14 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Vendor Phone Number</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Vendor Phone Number" />
+						<input type="text" class="form-control" placeholder="(###)###-####" />
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Vendor Phone Fax</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Vendor Fax Number" />
+						<input type="text" class="form-control" placeholder="(###)###-####" />
 					</div>
 				</div>
 			</div>
@@ -133,29 +141,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-6">
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Catalog Number</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Catalog No." required/>
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="name" class="col-xs-4 control-label">Generic Name & Description (Including Measurements):</label>
-				<div class="col-xs-8">
-					<textarea class="form-control" rows="3" required></textarea>
-				</div>
-			</div>
 
-			<div class="col-xs-6">
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Unit Size</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Unit Size" required/>
-					</div>
-				</div>
-			</div>
 			<div class="col-xs-6">
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Quantity</label>
@@ -177,14 +163,56 @@
 				<div class="form-group">
 					<label for="name" class="col-xs-4 control-label">Extended Cost</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" />
+						<input type="text" class="form-control" readonly/>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="name" class="col-xs-4 control-label">Generic Name & Description (Including Measurements):</label>
+				<div class="col-xs-8">
+					<textarea class="form-control" rows="3" required></textarea>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Unit Size </label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Unit Size" required/>
 					</div>
 				</div>
 			</div>
 		</fieldset>
-		<button type="submit" class="btn btn-primary btn-lg" style="margin-top:30px">Submit</button>
+		<button type="submit" class="btn btn-primary btn-lg" style="margin-top:30px; position:relative; float:right;" >Submit</button>
 	</form>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script>
+$('.input-group.date').datepicker({
+    format: "mm/dd/yyyy",
+    autoclose: true,
+    todayHighlight: true
+    });
+
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      showOn: "button",
+      buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+  });
+  $('.form').on('submit', function (e) {
+    $('.required').each(function () {
+        if (!this.value) {
+            $(this).css('background-color', 'red');
+        }
+    });
+    e.preventDefault(); //prevent form from submitting
+});
+  </script>
