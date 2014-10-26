@@ -1,0 +1,357 @@
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrapValidator.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet">
+
+<style>
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+.has-feedback {
+	position: static;
+}
+</style>
+
+<head>
+	<title>UAA COE: Internal Order Form</title>
+</head>
+
+<H1 style="text-align: center">UAA College of Engineering - Internal Order Form</H1>
+<H6 style="text-align: center; color:red">All fields marked with an asterisk (*) are required</H6>
+<div class="container" style="margin-top:50px">
+	<form class="form-horizontal" id="orderform">
+		<fieldset>
+ 			<legend>Requester Information</legend>
+ 			<div class="col-xs-6">
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Date Requested</label>
+					<div class="col-xs-8">
+						<div class="input-group date">
+							<input type="text" class="form-control" placeholder="Enter Date Requested" name="daterequested" id="datepicker" required/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Fund/Org #</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Fund/Org #"  name = "fundorg" required/>
+					</div>
+				</div>
+
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Authorized Name</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Authorized Name" name="authorizedname" required/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Requester</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Requester" />
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Date Needed</label>
+					<div class="col-xs-8">
+						<div class="input-group date">
+  							<input type="text" class="form-control" placeholder="Enter Date Needed" name="dateneeded"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Account Title</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Account Title" name="account" required/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Phone Number</label>
+					<div class="col-xs-8">
+						<input type="tel" class="form-control" placeholder="Enter phone number" />
+					</div>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset style="margin-top:20px">
+ 			<legend>Vendor Information</legend>
+
+			<div class="col-xs-6">
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Vendor</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor" name="vendor" required/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Attn:</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Attn" name="attn"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor Address</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor Address" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor City, State, Zip</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor City, State, Zip" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor Phone Number</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor Phone Number" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Vendor Phone Fax</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Vendor Fax" />
+					</div>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset style="margin-top:20px">
+ 			<legend>Purchase Information</legend>
+			<div class="form-group required">
+				<label for="name" class="col-xs-4 control-label">Detailed Business Purpose of Purchase:</label>
+				<div class="col-xs-8">
+					<textarea class="form-control " rows="3" name="purpose" required></textarea>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset style="margin-top:20px">
+ 			<legend>Item Information</legend>
+ 			<div class="col-xs-6">
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Item Number</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Item No." name="itemnum" required/>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Quantity</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Quantity" name="quantity" id="quant" value="0" required/>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Unit Cost</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Unit Cost" name="cost" id="ucost" value="0" required/>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label for="name" class="col-xs-4 control-label">Extended Cost</label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" name="extendedcost" id="ecost" readonly/>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group required">
+				<label for="name" class="col-xs-4 control-label">Generic Name & Description (Including Measurements):</label>
+				<div class="col-xs-8">
+					<textarea class="form-control" rows="3" name="description" required></textarea>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Unit Size </label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Unit Size" name="size" required/>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+		<button type="submit" class="btn btn-primary btn-lg" style="margin-top:30px; position:relative; float:right;" >Submit</button>
+	</form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/bootstrap/js/bootstrapValidator.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script>
+	function zero(){
+		document.getElementById('ucost').value = "";
+	}
+	function zero2(){
+		document.getElementById('quant').value = "";
+	}
+	function setCost(){
+		var q = parseInt(document.getElementById('quant').value);
+		var cost =  parseFloat(document.getElementById('ucost').value);
+		var ecost =  document.getElementById('ecost');
+		total = cost * q;
+		ecost.value = "$" + total.toFixed(2);
+	}
+	$('#ucost').on('change', function(e){
+		setCost();
+	});
+	$('#ucost').on('click', function(e){
+		zero();
+		$('#orderform').bootstrapValidator('revalidateField', 'cost');
+	});
+	$('#quant').on('change', function(e){
+		setCost();
+	});
+	$('#quant').on('click', function(e){
+		zero2();
+		$('#orderform').bootstrapValidator('revalidateField', 'quantity');
+	});
+
+  	$(function() {
+    		$( "#datepicker" ).datepicker({
+      			showOn: "button",
+      			buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+      			buttonImageOnly: true,
+      			buttonText: "Select date"
+    		});
+	});
+
+	$('.input-group.date').datepicker({
+    		format: "mm/dd/yyyy",
+   		 autoclose: true,
+    		todayHighlight: true
+    	});
+
+	$('#datepicker').on('changeDate show', function (e) {
+            	// Revalidate the date when user change it
+            	$('#orderform').bootstrapValidator('revalidateField', 'daterequested');
+        	});
+
+$(document).ready(function() {
+	setCost();
+    $('#orderform').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            daterequested: {
+                validators: {
+                    notEmpty: {
+                        message: 'The date requested is required and cannot be empty'
+                    },
+                    date: {
+                        format: 'MM/DD/YYYY', 
+                        message: 'The date is not valid'
+                    }
+                }
+            },
+            fundorg: {
+                validators: {
+                    notEmpty: {
+                        message: 'The fund/org # is required and cannot be empty'
+                    }
+                }
+            },
+            authorizedname: {
+                validators: {
+                    notEmpty: {
+                        message: 'The authorized name is required and cannot be empty'
+                    },
+                }
+            },
+            account: {
+                validators: {
+                    notEmpty: {
+                        message: 'The account title is required and cannot be empty'
+                    }
+                }
+            },
+            vendor: {
+                validators: {
+                    notEmpty: {
+                        message: 'The vendor is required and cannot be empty'
+                    }
+                }
+            },
+            purpose: {
+                validators: {
+                    notEmpty: {
+                        message: 'The detailed business purpose is required and cannot be empty'
+                    }
+                }
+            },
+            itemnum: {
+                validators: {
+                    notEmpty: {
+                        message: 'The item number is required and cannot be empty'
+                    }
+                }
+            },
+            cost: {
+                validators: {
+                    notEmpty: {
+                        message: 'The unit cost is required and cannot be empty'
+                    }
+                }
+            },
+            quantity: {
+                validators: {
+                    notEmpty: {
+                        message: 'The quantity is required and cannot be empty'
+                    }
+                }
+            },
+            description: {
+                validators: {
+                    notEmpty: {
+                        message: 'The name and description are required and cannot be empty'
+                    }
+                }
+            },
+            size: {
+                validators: {
+                    notEmpty: {
+                        message: 'The unit size is required and cannot be empty'
+                    }
+                }
+            }
+
+        }
+    });
+});
+  </script>
