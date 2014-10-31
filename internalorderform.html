@@ -39,7 +39,7 @@
 				<div class="form-group required">
 					<label for="name" class="col-xs-4 control-label">Fund/Org #</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Fund/Org #"  name = "fundorg" required/>
+						<input type="text" class="form-control group" placeholder="Enter Fund/Org #"  name = "fundorg"/>
 					</div>
 				</div>
 
@@ -73,7 +73,7 @@
 				<div class="form-group required">
 					<label for="name" class="col-xs-4 control-label">Account Title</label>
 					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Account Title" name="account" required/>
+						<input type="text" class="form-control group" placeholder="Enter Account Title" name="account"/>
 					</div>
 				</div>
 
@@ -211,12 +211,30 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 <script>
+	var validator = $(orderform).data('bootstrapValidator');
 	function zero(){
 		document.getElementById('ucost').value = "";
 	}
 	function zero2(){
 		document.getElementById('quant').value = "";
 	}
+	function checkGroup(value, validator){
+		var $groups = $('#orderform').find('.group'),
+		        total   = $groups.length;
+		    // If all elements are empty, then return false
+		    if ($groups.filter(function() { return $(this).val() === ''; }).length === total)
+		    {
+		        return false;
+		    } else {
+		        // Update the status of this validator to all fields
+		        $groups.each(function() {
+		            validator.updateStatus($(this).attr('name'), validator.STATUS_VALID, 'callback');
+		        });
+
+		        // Otherwise, returns true
+		        return true;
+		    }
+	};
 	function setCost(){
 		var q = parseInt(document.getElementById('quant').value);
 		var cost =  parseFloat(document.getElementById('ucost').value);
@@ -282,11 +300,27 @@ $(document).ready(function() {
             },
             fundorg: {
                 validators: {
-                    notEmpty: {
-                        message: 'The fund/org # is required and cannot be empty'
-                    }
+                	callback: {
+                		message: 'The Fund/Org# or account title is required and cannot be empty',
+                		callback: function (value, validator) {
+                			return checkGroup(value, validator);
+                		}
+                	}
                 }
             },
+            // captcha: {
+            //         validators: {
+            //             callback: {
+            //                 message: 'Wrong answer',
+            //                 callback: function (value, validator, $field) {
+            //                     // Determine the numbers which are generated in captchaOperation
+            //                     var items = $('#captchaOperation').html().split(' '),
+            //                         sum   = parseInt(items[0]) + parseInt(items[2]);
+            //                     return value == sum;
+            //                 }
+            //             }
+            //         }
+            //     }
             authorizedname: {
                 validators: {
                     notEmpty: {
@@ -296,9 +330,12 @@ $(document).ready(function() {
             },
             account: {
                 validators: {
-                    notEmpty: {
-                        message: 'The account title is required and cannot be empty'
-                    }
+                    callback: {
+                		message: 'The Fund/Org# or account title is required and cannot be empty',
+                		callback: function (value, validator) {
+                			return checkGroup(value, validator);
+                		}
+                	}
                 }
             },
             vendor: {
@@ -350,7 +387,6 @@ $(document).ready(function() {
                     }
                 }
             }
-
         }
     });
 });
