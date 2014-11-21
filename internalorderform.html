@@ -21,186 +21,186 @@
 </head>
 
 <H1 style="text-align: center">UAA College of Engineering - Internal Order Form</H1>
-<H6 style="text-align: center; color:red">All fields marked with an asterisk (*) are required</H6>
+<H6 style="text-align: center; color:red">All fields marked with an asterisk (*) are required.</H6>
 <div class="container" style="margin-top:50px">
-	<form class="form-horizontal" id="orderform">
-		<fieldset>
- 			<legend>Requester Information</legend>
- 			<div class="col-xs-6">
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Date Requested</label>
-					<div class="col-xs-8">
-						<div class="input-group date">
-							<input type="text" class="form-control" placeholder="Enter Date Requested" name="daterequested" id="datepicker" required/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-						</div>
-					</div>
-				</div>
+    <form class="form-horizontal" id="orderform" > 
+        <fieldset>
+            <legend>Requester Information</legend>
+            <div class="col-xs-6">
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Date Requested</label>
+                    <div class="col-xs-8">
+                        <div class="input-group date">
+                            <input type="text" class="form-control" placeholder="Enter Date Requested" name="daterequested" id="datepicker" required/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
 
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Fund/Org #</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control group" placeholder="Enter Fund/Org #"  name = "fundorg"/>
-					</div>
-				</div>
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Fund/Org #</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control group" placeholder="Enter Fund/Org #"  name = "fundorg" id="fundorg"/>
+                    </div>
+                </div>
 
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Authorized Name</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Authorized Name" name="authorizedname" required/>
-					</div>
-				</div>
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Authorized Name</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Authorized Name" name="authorizedname" id="authorizedname" required/>
+                    </div>
+                </div>
 
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Requester</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Requester" />
-					</div>
-				</div>
-			</div>
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Requester</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Requester" id="requester" />
+                    </div>
+                </div>
+            </div>
 
-			<div class="col-xs-6">
+            <div class="col-xs-6">
 
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Date Needed</label>
-					<div class="col-xs-8">
-						<div class="input-group date">
-  							<input type="text" class="form-control" placeholder="Enter Date Needed" name="dateneeded"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-						</div>
-					</div>
-				</div>
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Date Needed</label>
+                    <div class="col-xs-8">
+                        <div class="input-group date">
+                            <input type="text" class="form-control" placeholder="Enter Date Needed" name="dateneeded" id="datepicker2"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
 
-				
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Account Title</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control group" placeholder="Enter Account Title" name="account"/>
-					</div>
-				</div>
 
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Phone Number</label>
-					<div class="col-xs-8">
-						<input type="tel" class="form-control" placeholder="Enter phone number" />
-					</div>
-				</div>
-			</div>
-		</fieldset>
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Account Title</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control group" placeholder="Enter Account Title" name="account" id="accounttitle"/>
+                    </div>
+                </div>
 
-		<fieldset style="margin-top:20px">
- 			<legend>Vendor Information</legend>
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Phone Number</label>
+                    <div class="col-xs-8">
+                        <input type="tel" class="form-control" placeholder="Enter Phone Number" id="phonenumber" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
 
-			<div class="col-xs-6">
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Vendor</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Vendor" name="vendor" required/>
-					</div>
-				</div>
+        <fieldset style="margin-top:20px">
+            <legend>Vendor Information</legend>
 
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Attn:</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Attn" name="attn"/>
-					</div>
-				</div>
+            <div class="col-xs-6">
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Vendor</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Vendor" name="vendor" id="vendor" required/>
+                    </div>
+                </div>
 
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Vendor Address</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Vendor Address" />
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-xs-6">
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Vendor City, State, Zip</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Vendor City, State, Zip" />
-					</div>
-				</div>
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Attn</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Attn" name="attn" id="attn"/>
+                    </div>
+                </div>
 
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Vendor Phone Number</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Vendor Phone Number" />
-					</div>
-				</div>
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Vendor Address</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Vendor Address" id="vendoraddress" />
+                    </div>
+                </div>
+            </div>
 
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Vendor Phone Fax</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Vendor Fax" />
-					</div>
-				</div>
-			</div>
-		</fieldset>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Vendor City, State, Zip</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Vendor City, State, Zip" id="vendorcitystatezip" />
+                    </div>
+                </div>
 
-		<fieldset style="margin-top:20px">
- 			<legend>Purchase Information</legend>
-			<div class="form-group required">
-				<label for="name" class="col-xs-4 control-label">Detailed Business Purpose of Purchase:</label>
-				<div class="col-xs-8">
-					<textarea class="form-control " rows="3" name="purpose" required></textarea>
-				</div>
-			</div>
-		</fieldset>
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Vendor Phone Number</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Vendor Phone Number" id="vendorphonenumber" />
+                    </div>
+                </div>
 
-		<fieldset style="margin-top:20px">
- 			<legend>Item Information</legend>
- 			<div class="col-xs-6">
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Item Number</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Item No." name="itemnum" required/>
-					</div>
-				</div>
-			</div>
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Vendor Phone Fax</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Vendor Fax" id="vendorphonefax"/>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
 
-			<div class="col-xs-6">
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Quantity</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Quantity" name="quantity" id="quant" value="0" required/>
-					</div>
-				</div>
-			</div>
+        <fieldset style="margin-top:20px">
+            <legend>Purchase Information</legend>
+            <div class="form-group required">
+                <label for="name" class="col-xs-4 control-label">Detailed Business Purpose of Purchase</label>
+                <div class="col-xs-8">
+                    <textarea class="form-control " rows="3" name="purpose" id="purpose" required></textarea>
+                </div>
+            </div>
+        </fieldset>
 
-			<div class="col-xs-6">
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Unit Cost</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Unit Cost" name="cost" id="ucost" value="0" required/>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div class="form-group">
-					<label for="name" class="col-xs-4 control-label">Extended Cost</label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" name="extendedcost" id="ecost" readonly/>
-					</div>
-				</div>
-			</div>
+        <fieldset style="margin-top:20px">
+            <legend>Item Information</legend>
+            <div class="col-xs-6">
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Item Number</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Item No." name="itemnum" id="itemnumber" required/>
+                    </div>
+                </div>
+            </div>
 
-			<div class="form-group required">
-				<label for="name" class="col-xs-4 control-label">Generic Name & Description (Including Measurements):</label>
-				<div class="col-xs-8">
-					<textarea class="form-control" rows="3" name="description" required></textarea>
-				</div>
-			</div>
+            <div class="col-xs-6">
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Quantity</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Quantity" name="quantity" id="quant" value="0" required/>
+                    </div>
+                </div>
+            </div>
 
-			<div class="col-xs-6">
-				<div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Unit Size </label>
-					<div class="col-xs-8">
-						<input type="text" class="form-control" placeholder="Enter Unit Size" name="size" required/>
-					</div>
-				</div>
-			</div>
-		</fieldset>
-		<button type="submit" class="btn btn-primary btn-lg" style="margin-top:30px; position:relative; float:right;" >Submit</button>
-	</form>
+            <div class="col-xs-6">
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Unit Cost</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Unit Cost" name="cost" id="ucost" value="0" required/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="name" class="col-xs-4 control-label">Extended Cost</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="extendedcost" id="ecost" readonly/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group required">
+                <label for="name" class="col-xs-4 control-label">Generic Name & Description (Including Measurements)</label>
+                <div class="col-xs-8">
+                    <textarea class="form-control" rows="3" name="description" id="genericnamedescription" required></textarea>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="form-group required">
+                    <label for="name" class="col-xs-4 control-label">Unit Size </label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" placeholder="Enter Unit Size" name="size" id="unitsize" required/>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary btn-lg" style="margin-top:30px; position:relative; float:right;" >Submit</button>
+    </form>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -210,8 +210,22 @@
 <script src="/bootstrap/js/bootstrapValidator.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-<script>
+<script type="text/javascript" src="/jsPDF/jspdf.js"></script>
+<script type="text/javascript" src="/jsPDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+<script type="text/javascript" src="/jsPDF/jspdf.plugin.split_text_to_size.js"></script>
+<script type="text/javascript" src="/jsPDF/jspdf.plugin.from_html.js"></script>
+<script type="text/javascript" src="/jsPDF/jspdf.plugin.addimage.js"></script>
+<script type="text/javascript" src="/jsPDF/FileSaver.js"></script>
+
+<script type="text/javascript">
 	var validator = $(orderform).data('bootstrapValidator');
+            // function submit(){
+            //     validator.validate();
+            //     window.alert("form submitted");
+            //     if(validator.isValid()){
+            //         createPDF();
+            //     }
+            // }
 	function zero(){
 		document.getElementById('ucost').value = "";
 	}
@@ -277,117 +291,239 @@
             	$('#orderform').bootstrapValidator('revalidateField', 'daterequested');
         	});
 
-$(document).ready(function() {
-	setCost();
-    $('#orderform').bootstrapValidator({
-        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            daterequested: {
-                validators: {
-                    notEmpty: {
-                        message: 'The date requested is required and cannot be empty'
-                    },
-                    date: {
-                        format: 'MM/DD/YYYY', 
-                        message: 'The date is not valid'
-                    }
-                }
-            },
-            fundorg: {
-                validators: {
-                	callback: {
-                		message: 'The Fund/Org# or account title is required and cannot be empty',
-                		callback: function (value, validator) {
-                			return checkGroup(value, validator);
-                		}
-                	}
-                }
-            },
-            // captcha: {
-            //         validators: {
-            //             callback: {
-            //                 message: 'Wrong answer',
-            //                 callback: function (value, validator, $field) {
-            //                     // Determine the numbers which are generated in captchaOperation
-            //                     var items = $('#captchaOperation').html().split(' '),
-            //                         sum   = parseInt(items[0]) + parseInt(items[2]);
-            //                     return value == sum;
-            //                 }
-            //             }
-            //         }
-            //     }
-            authorizedname: {
-                validators: {
-                    notEmpty: {
-                        message: 'The authorized name is required and cannot be empty'
-                    },
-                }
-            },
-            account: {
-                validators: {
-                    callback: {
-                		message: 'The Fund/Org# or account title is required and cannot be empty',
-                		callback: function (value, validator) {
-                			return checkGroup(value, validator);
-                		}
-                	}
-                }
-            },
-            vendor: {
-                validators: {
-                    notEmpty: {
-                        message: 'The vendor is required and cannot be empty'
-                    }
-                }
-            },
-            purpose: {
-                validators: {
-                    notEmpty: {
-                        message: 'The detailed business purpose is required and cannot be empty'
-                    }
-                }
-            },
-            itemnum: {
-                validators: {
-                    notEmpty: {
-                        message: 'The item number is required and cannot be empty'
-                    }
-                }
-            },
-            cost: {
-                validators: {
-                    notEmpty: {
-                        message: 'The unit cost is required and cannot be empty'
-                    }
-                }
-            },
-            quantity: {
-                validators: {
-                    notEmpty: {
-                        message: 'The quantity is required and cannot be empty'
-                    }
-                }
-            },
-            description: {
-                validators: {
-                    notEmpty: {
-                        message: 'The name and description are required and cannot be empty'
-                    }
-                }
-            },
-            size: {
-                validators: {
-                    notEmpty: {
-                        message: 'The unit size is required and cannot be empty'
-                    }
-                }
+	$(document).ready(function() {
+		setCost();
+	    $('#orderform').bootstrapValidator({
+	        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+	        feedbackIcons: {
+	            valid: 'glyphicon glyphicon-ok',
+	            invalid: 'glyphicon glyphicon-remove',
+	            validating: 'glyphicon glyphicon-refresh'
+	        },
+	        fields: {
+	            daterequested: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The date requested is required and cannot be empty'
+	                    },
+	                    date: {
+	                        format: 'MM/DD/YYYY', 
+	                        message: 'The date is not valid'
+	                    }
+	                }
+	            },
+	            fundorg: {
+	                validators: {
+	                	callback: {
+	                		message: 'The Fund/Org# or account title is required and cannot be empty',
+	                		callback: function (value, validator) {
+	                			return checkGroup(value, validator);
+	                		}
+	                	}
+	                }
+	            },
+	            // captcha: {
+	            //         validators: {
+	            //             callback: {
+	            //                 message: 'Wrong answer',
+	            //                 callback: function (value, validator, $field) {
+	            //                     // Determine the numbers which are generated in captchaOperation
+	            //                     var items = $('#captchaOperation').html().split(' '),
+	            //                         sum   = parseInt(items[0]) + parseInt(items[2]);
+	            //                     return value == sum;
+	            //                 }
+	            //             }
+	            //         }
+	            //     }
+	            authorizedname: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The authorized name is required and cannot be empty'
+	                    },
+	                }
+	            },
+	            account: {
+	                validators: {
+	                    callback: {
+	                		message: 'The Fund/Org# or account title is required and cannot be empty',
+	                		callback: function (value, validator) {
+	                			return checkGroup(value, validator);
+	                		}
+	                	}
+	                }
+	            },
+	            vendor: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The vendor is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            purpose: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The detailed business purpose is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            itemnum: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The item number is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            cost: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The unit cost is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            quantity: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The quantity is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            description: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The name and description are required and cannot be empty'
+	                    }
+	                }
+	            },
+	            size: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The unit size is required and cannot be empty'
+	                    }
+	                }
+	            }
+	        }
+
+	    })
+                .on('success.form.bv', function(e){
+                    e.preventDefault();
+                    createPDF();
+                });
+	});
+
+	function createPDF()
+    {
+        var doc = new jsPDF();
+
+        var dateRequested = document.getElementById('datepicker');
+        var dateNeeded = document.getElementById('datepicker2');
+        var fundOrg = document.getElementById('fundorg');
+        var accountTitle = document.getElementById('accounttitle');
+        var authorizedName = document.getElementById('authorizedname');
+        var phoneNumber = document.getElementById('phonenumber');
+        var requester = document.getElementById('requester');
+
+        var vendor = document.getElementById('vendor');
+        var vendorCityStateZip = document.getElementById('vendorcitystatezip');
+        var attn = document.getElementById('attn');
+        var vendorPhoneNumber = document.getElementById('vendorphonenumber');
+        var vendorAddress = document.getElementById('vendoraddress');
+        var vendorPhoneFax = document.getElementById('vendorphonefax');
+
+        var purpose = document.getElementById('purpose');
+
+        var itemNumber = document.getElementById('itemnumber');
+        var quantity = document.getElementById('quant');
+        var unitCost = document.getElementById('ucost');
+        var extendedCost = document.getElementById('ecost');
+        var genericNameDescription = document.getElementById('genericnamedescription');
+        var unitSize = document.getElementById('unitsize');
+
+        var img = 'data:image/jpeg;base64,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';
+
+        doc.addImage(img, 'JPEG', 150, 5, 50, 20);
+
+        doc.text(20, 20, 'UAA College of Engineering - Internal Order Form');
+
+        doc.setFontType("italic");
+        doc.text(20, 33, doc.splitTextToSize('Directions: Check the form to make sure the information provided is correct. You may submit the form to the fiscal office using one of the following ways:', 180));
+        doc.text(20, 54, doc.splitTextToSize("        " + "1. Save the PDF File by right clicking the screen and pressing" + "\n        " + "save as. Email the saved form to the fiscal office." + "\n        " +
+            "2. Print out the PDF File and physically submit the form to the fiscal" + "\n        " + "office.", 180));
+
+        // Office use only box
+        doc.setLineWidth(0.7);
+        doc.line(20, 265, 188, 265); // top horizontal line
+        doc.line(20, 290, 188, 290); // bottom horizontal line
+        doc.line(20, 265, 20, 290); // left vertical line
+        doc.line(188, 265, 188, 290); // right vertical line
+
+        doc.setFontSize(12);
+        doc.text(23, 271, "Office use only");
+
+        doc.setFontSize(16);
+        doc.setFontType("normal");
+
+        var bodyText = doc.splitTextToSize(
+            "Date Requested: " + dateRequested.value + "\n" +
+            "Date Needed: " + dateNeeded.value + "\n" +
+            "Fund/Org #: " + fundOrg.value + "\n" +
+            "Account Title: " + accountTitle.value + "\n" +
+            "Authorized Name: " + authorizedName.value + "\n" +
+            "Phone Number: " + phoneNumber.value + "\n" +
+            "Requester: " + requester.value + "\n" +
+            "\n" +
+            "Vendor: " + vendor.value + "\n" +
+            "Vendor City, State, Zip: " + vendorCityStateZip.value + "\n" +
+            "Attn: " + attn.value + "\n" +
+            "Vendor Phone Number: " + vendorPhoneNumber.value + "\n" +
+            "Vendor Address: " + vendorAddress.value + "\n" +
+            "Vendor Phone Fax: " + vendorPhoneFax.value + "\n" +
+            "\n" +
+            "Detailed Business Purpose of Purchase: " + purpose.value + "\n" +
+            "\n" +
+            "Item Number: " + itemNumber.value + "\n" +
+            "Quantity: " + quantity.value + "\n" +
+            "Unit Cost: " + unitCost.value + "\n" +
+            "Extended Cost: " + extendedCost.value + "\n" +
+            "Generic Name & Description (Including Measurements): " + genericNameDescription.value + "\n" +
+            "Unit Size: " + unitSize.value + "\n"
+            , 180);
+
+        // the first page supports 32 lines
+        if(bodyText.length <= 32)
+        {
+            doc.text(20, 80, bodyText);
+        }
+        else
+        {
+            var firstPageBodyText = bodyText.slice(0, 32);
+            doc.text(20, 80, firstPageBodyText);
+
+            // remove lines that were already printed
+            bodyText = bodyText.slice(32, bodyText.length);
+
+            // each page after the first supports 48 lines
+            var middlePageText;
+            while(bodyText.length > 48)
+            {
+                doc.addPage();
+                middlePageText = bodyText.slice(0, 48);
+                doc.text(20, 20, middlePageText);
+                bodyText = bodyText.slice(48, bodyText.length);
+            }
+
+            if(bodyText.length > 0) {
+                doc.addPage();
+                var lastPageText = bodyText.slice(0, bodyText.length);
+                doc.text(20, 20, lastPageText);
             }
         }
-    });
-});
+
+        //doc.save('IOF.pdf');
+
+        doc.setProperties({
+            title: 'Internal Order Form'
+        });
+
+        doc.output('datauri');
+    }
   </script>
