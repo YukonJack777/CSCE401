@@ -1,0 +1,857 @@
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrapValidator.min.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/> -->
+<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet"> -->
+
+<style>
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+.has-feedback {
+	position: static;
+}
+legend{
+	font-weight: bold;
+}
+</style>
+<head>
+	<title>UAA COE: Student Employment Form</title>
+</head>
+<center><img src="/bootstrap/img/UAA-EngineeringLogos_GreenGold.jpg" alt="UAA-EngineeringLogos_GreenGold.jpg" width="940px" height="250px" ></center>
+<H1 style="text-align: center">Student, Temporary, or Graduate Employment Request Form </H1>
+<H6 style="text-align: center; color:red">All fields marked with an asterisk (*) are required.</H6>
+<div class="container" style="margin-top:50px">
+	<form class="form-horizontal" id="hireform">
+		<fieldset>
+			<legend>General Information</legend>
+			<div class="col-xs-6">
+				<div class="form-group required" >
+					<label for="name" class="col-xs-4 control-label">Name: </label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Name"  name="name" required/>
+					</div>
+				</div>
+
+				<div class="form-group required" >
+					<label for="name" class="col-xs-4 control-label">UAA ID #: </label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter UAA ID#" name="idnum" required/>
+					</div>
+				</div>
+
+				<div class="form-group required" >
+					<label for="name" class="col-xs-4 control-label">UAA or other Email: </label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter Email" name="email" required/>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="form-group required" >
+					<label for="name" class="col-xs-4 control-label">Hours per Week: </label>
+					<div class="col-xs-8">
+						<input type="text" class="form-control" placeholder="Enter # of hours/week"  name="hours" required/>
+					</div>
+				</div>
+<!-- 
+				<div class="form-group required" >
+					<label for="name" class="col-xs-4 control-label">Start Date: </label>
+					<div class="col-xs-8">
+						<div class="input-group date">
+							<input type="text" class="form-control" placeholder="Enter Start Date" name="startdate" id="datepicker" required/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						</div>
+					</div>
+				</div> -->
+				<div class="form-group required">
+			                    	<label for="name" class="col-xs-4 control-label">Start Date: </label>
+			                    	<div class="col-xs-8">
+			                        	<div class="input-group date">
+			                            	<input type="text" class="form-control" placeholder="Enter Start Date" name="startdate" id="datepicker" required/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+			                        	</div>
+			                    	</div>
+			             </div>
+
+				<div class="form-group required" >
+					<label for="name" class="col-xs-4 control-label">End Date: </label>
+					<div class="col-xs-8">
+						<div class="input-group date2">
+							<input type="text" class="form-control" placeholder="Enter End Date" name="enddate" id="datepicker2" required/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group required" >
+				<label for="studentstatus" class="col-xs-4 control-label">Student is: </label>
+				<div class="col-xs-8">
+					<select class="form-control" id="studentstatus" name="studentstatus">
+						<option value="" disabled selected>Select option</option>
+						<option>Domestic</option>
+						<option>International</option>
+			 			<option>Visa</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group required">
+				<label for="name" class="col-xs-4 control-label">Describe other UAA employment during same dates:</label>
+				<div class="col-xs-8">
+					<textarea class="form-control" rows="3" name="uaaprev"></textarea>
+				</div>
+			</div>
+
+			<div class="form-group required">
+				<label for="hiringtype" class="col-xs-4 control-label">Hire Type: </label>
+				<div class="col-xs-8">
+					<select class="form-control" id="hiretype" name="hiretype">
+		  				<option value="" disabled selected>Select option</option>
+		  				<option>New Hire</option>
+		  				<option>Extend Existing Contract</option>
+		 				<option>Re-Hire</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group required">
+				<label for="collegelevel" class="col-xs-4 control-label">College Level: </label>
+				<div class="col-xs-8">
+					<select class="form-control" id="collegelevel" name="collegelevel">
+						<option value="" disabled selected>Select option</option>
+		  				<option value="Undergraduate">Undergraduate</option>
+		  				<option value="Graduate">Graduate</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group required" >
+				<label for="tempselect" class="col-xs-4 control-label">Temporary Employee: </label>
+				<div class="col-xs-8">
+					<select class="form-control" id="tempselect" name="tempselect">
+		  				<option value="" disabled selected>Select option</option>
+		  				<option value="No">No</option>
+		  				<option value="Yes">Yes</option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset style="margin-top:20px" id="TA">
+		            <legend>Teaching Assistant Only</legend>
+
+			<div class="form-group required">
+				<label for="ta" class="col-xs-4 control-label">Will Student work As A Teaching Assistant: </label>
+				<div class="col-xs-8">
+					<select class="form-control" id="ta" name="ta">
+						<option value="" disabled selected>Select option</option>
+						<option>No</option>
+						<option>Yes</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group required" >
+				<label for="name" class="col-xs-4 control-label">Course Enrollment Total: </label>
+				<div class="col-xs-8">
+					<input type="text" class="form-control" id="courseenroll" placeholder="Enter course enrollment total"  name="courseenroll"required/>
+				</div>
+			</div>
+			<div class="form-group required" >
+				<label for="name" class="col-xs-4 control-label">Course Information: </label>
+				<div class="col-xs-8">
+					<input type="text" class="form-control" id="courseinfo" placeholder="Enter course information including CRN" name="courseinfo" required/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="workas" class="col-xs-4 control-label">Student Works As: </label>
+				<div class="col-xs-8">
+					<select class="form-control" id="workas" name="workas">
+						<option value="" disabled selected>Select option</option>
+						<option>Grader</option>
+						<option>Run Lab</option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
+		<div id="undergrad">
+			<fieldset style="margin-top:20px">
+			            <legend>Undergraduate Student Classification and Eligibility for Employment (ST/SN)</legend>
+			            <div class="col-xs-6">
+					<div class="form-group required">
+						<label for="studentposition" class="col-xs-4 control-label">Student position: </label>
+						<div class="col-xs-8">
+							<select class="form-control" id="studentposition" name="studentposition">
+								<option value="" disabled selected>Select option</option>
+	  							<option>A $8.50</option>
+	  							<option>B $9.50</option>
+	 				 			<option>C $10.50</option>
+							</select>
+						</div>
+					</div>
+				            <div class="form-group required">
+					                    <label for="name" class="col-xs-4 control-label">Current Enrollment</label>
+					                    <div class="col-xs-8">
+					                        	<input type="text" class="form-control" placeholder="Enter current enrollment" name="currentenrollment" id="currentenrollment" required/>
+					                    </div>
+				            </div>
+					<div class="form-group required">
+						<label for="MAR" class="col-xs-4 control-label">Meets Academic Requirments: </label>
+						<div class="col-xs-8">
+							<select class="form-control" id="MAR" name="MAR">
+								<option value="" disabled selected>Select option</option>
+								<option>Yes</option>
+								<option>No</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Fund/Org # to Charge</label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control undergroup" placeholder="Enter Fund/Org #" id="Fund/Org # 1" name="underfund1"/>
+				                    	</div>
+				            </div>
+
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Fund/Org # to Charge 2</label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control undergroup" placeholder="Enter Fund/Org # 2" id="Fund/Org # 2" name="underfund2" />
+				                    	</div>
+				            </div>
+					<div class="form-group required">
+						<label for="EV" class="col-xs-4 control-label">Has A Student Employment Verification Been Completed: </label>
+						<div class="col-xs-8">
+							<select class="form-control" id="EV" name="EV">
+								<option value="" disabled selected>Select option</option>
+								<option>Yes</option>
+								<option>No</option>
+							</select>
+						</div>
+					</div>
+			            </div>
+			            <div class="form-group required">
+					<label for="name" class="col-xs-4 control-label">Descrition Of Duties:</label>
+					<div class="col-xs-8">
+						<textarea class="form-control" rows="3" name="underdesc" required></textarea>
+					</div>
+				</div>
+	        		</fieldset>
+       		</div> 
+       		<div id="graduate">
+			<fieldset style="margin-top:20px">
+			            <legend>Graduate Student Assignment  (GN/GT)</legend>
+			            <div class="col-xs-6">
+					<div class="form-group">
+						<label for="gradassign" class="col-xs-4 control-label">Student position: </label>
+						<div class="col-xs-8">
+							<select class="form-control" id="gradassign" name="gradassign">
+	  							<option value="" disabled selected>Select option</option>
+	  							<option>Research</option>
+	  							<option>Teaching</option>
+	 				 			<option>Service</option>
+							</select>
+						</div>
+					</div>
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">BiWeekly Graduate Stipend Amount: $</label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control" placeholder="Enter stipend amount" id="stipend" name="stipend" required/>
+				                    	</div>
+				            </div>
+				            <div class="form-group required">
+						<label for="tuition" class="col-xs-4 control-label">Include Tuition: </label>
+						<div class="col-xs-8">
+							<select class="form-control" id="tuition" name="tuition">
+								<option value="" disabled selected>Select option</option>
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group required">
+						<label for="coursefees" class="col-xs-4 control-label">Include Course Fees: </label>
+						<div class="col-xs-8">
+							<select class="form-control" id="coursefees" name="coursefees">
+								<option value="" disabled selected>Select option</option>
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Fund/Org # to Charge </label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control gradgroup" placeholder="Enter Fund/Org #" id="Fund/Org #" name="gradfund1" />
+				                    	</div>
+				            </div>
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Fund/Org # to Charge 2</label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control gradgroup" placeholder="Enter Fund/Org # 2" id="Fund/Org # 2" name="gradfund2" />
+				                    	</div>
+				            </div>
+				            <div class="form-group required">
+						<label for="healthins" class="col-xs-4 control-label">Include Health Insurance: </label>
+						<div class="col-xs-8">
+							<select class="form-control" id="healthins" name="healthins">
+								<option value="" disabled selected>Select option</option>
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						</div>
+					</div>
+				 </div>
+			            <div class=" col-xs-12 form-group required">
+					<label for="name" class="col-xs-4 control-label">Descrition Of Duties:</label>
+					<div class="col-xs-8">
+						<textarea class="form-control" rows="3" name="graddesc" required></textarea>
+					</div>
+				</div>
+	        		</fieldset>
+	        	</div>
+	        	<div id="temp">
+			<fieldset style="margin-top:20px">
+			            <legend>Temporary Employee  (NT, NX, XT)</legend>
+			            <div class="col-xs-6">
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Job Title: </label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control" placeholder="Enter job title" id="jobtitle" name="jobtitle" required/>
+				                    	</div>
+				            </div>
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Fund/Org # to Charge </label> 
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control tempgroup" placeholder="Enter Fund/Org #" id="Fund/Org #" name="tempfund1" />
+				                    	</div>
+				            </div>
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Fund/Org # to Charge 2</label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control tempgroup" placeholder="Enter Fund/Org # 2" id="Fund/Org # 2" name="tempfund2" />
+				                    	</div>
+				            </div>
+				</div>
+				<div class="col-xs-6">
+				            <div class="form-group required">
+				                    	<span id="helpBlock" class="help-block" style="text-align: center"><b>From Temporary Staff Salary Schedule:</b></span>
+				                    	<label for="name" class="col-xs-4 control-label">Grade: </label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control" placeholder="Enter grade" id="grade" name="grade" aria-describedby="helpBlock" required/>
+				                    	</div>
+				            </div>
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Step: </label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control" placeholder="Enter step" id="step" name="step" required/>
+				                    	</div>
+				            </div>
+				            <div class="form-group required">
+				                    	<label for="name" class="col-xs-4 control-label">Hourly Rate: </label>
+				                    	<div class="col-xs-8">
+				                        	<input type="text" class="form-control" placeholder="Enter hourly rate" id="hourlyrate" name="hourlyrate" required/>
+				                    	</div>
+				            </div>
+				 </div>
+			            <div class=" col-xs-12 form-group required">
+					<label for="name" class="col-xs-4 control-label">Descrition Of Duties:</label>
+					<div class="col-xs-8">
+						<textarea class="form-control" rows="3" name="tempdesc" required></textarea>
+					</div>
+				</div>
+	        		</fieldset>
+       		</div> 
+        		<fieldset>
+	        		<legend>Supervisor or PI Name</legend>
+	        		<div class="form-group required">
+		                    	<label for="name" class="col-xs-4 control-label">Supervisor or PI Name: </label>
+		                    	<div class="col-xs-8">
+		                        	<input type="text" class="form-control" placeholder="Enter supervisor or PI name" id="supervisor" name="supervisor" required/>
+		                    	</div>
+			</div>
+		            <input type="hidden" class="form-control" name="datesubmit" id="datesubmit"/>
+        		</fieldset>
+		<button type="submit" class="btn btn-primary btn-lg" style="margin-top:30px; position:relative; float:right;" >Submit</button>
+	</form>
+</div>
+
+<script src="/bootstrap/js/jquery-1.11.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/bootstrap/js/bootstrapValidator.min.js"></script>
+<script src="/bootstrap/js/bootstrap-datepicker.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>  -->
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
+<!-- <script type="text/javascript" src="/jsPDF/jspdf.js"></script>
+<script type="text/javascript" src="/jsPDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+<script type="text/javascript" src="/jsPDF/jspdf.plugin.split_text_to_size.js"></script>
+<script type="text/javascript" src="/jsPDF/jspdf.plugin.from_html.js"></script>
+<script type="text/javascript" src="/jsPDF/jspdf.plugin.addimage.js"></script>
+<script type="text/javascript" src="/jsPDF/FileSaver.js"></script> -->
+
+<script type="text/javascript">
+	var date = new Date();
+	var currdate= (date.getMonth()+ 1) + '/' + date.getDate() + '/' + date.getFullYear();
+	$("#datesubmit").val(currdate);
+	$(function() {
+    		$( "#datepicker" ).datepicker({
+      			showOn: "button",
+      			buttonImage: "/bootstrap/img/calendar.gif",
+      			buttonImageOnly: true,
+      			buttonText: "Select date",
+      			format: "mm/dd/yyyy",
+   			autoclose: true,
+    			todayHighlight: true
+    		});
+    		$( "#datepicker2" ).datepicker({
+      			showOn: "button",
+      			buttonImage: "/bootstrap/img/calendar.gif",
+      			buttonImageOnly: true,
+      			buttonText: "Select date",
+      			format: "mm/dd/yyyy",
+   			autoclose: true,
+    			todayHighlight: true
+    		});
+	});
+
+	$('#datepicker').on('changeDate show', function (e) {
+            	// Revalidate the date when user change it
+            	$('#hireform').bootstrapValidator('revalidateField', 'startdate');
+        	});
+
+	$('#datepicker2').on('changeDate show', function (e) {
+            	// Revalidate the date when user change it
+            	$('#hireform').bootstrapValidator('revalidateField', 'enddate');
+        	});
+
+	$(function(){
+		$("#graduate").hide();
+		$("#undergrad").hide();
+		$("#temp").hide();
+	});
+
+	$("#collegelevel").on("change", function(e){
+		if($(this).val() == 'Undergraduate'){
+			$("#graduate").hide();
+			$("#undergrad").show();
+		}
+		else if($(this).val() == 'Graduate'){
+			$("#undergrad").hide();
+			$("#graduate").show();
+		}
+	});
+
+	$("#tempselect").on("change", function(e){
+		if($(this).val() == 'Yes'){
+			$("#graduate").hide();
+			$("#undergrad").hide();
+			$("#temp").show();
+		}
+		if($(this).val() == 'No'){
+			$("#temp").hide();
+		}
+	});
+
+	$("#ta").on("change", function(e){
+		if($(this).val() == 'No'){
+			console.log($(hireform).data('bootstrapValidator'));
+			$(hireform).data('bootstrapValidator').updateStatus('courseenroll', 'VALID').validateField("courseenroll");
+			$(hireform).data('bootstrapValidator').updateStatus('courseinfo', 'VALID').validateField("courseinfo");
+			$(hireform).data('bootstrapValidator').updateStatus('workas', 'VALID').validateField("workas");
+			$("#courseenroll").attr('disabled','disabled');
+			$("#courseinfo").attr('disabled','disabled');
+			$("#workas").attr('disabled','disabled');
+		}
+		if($(this).val() == 'Yes'){
+			$("#courseenroll").removeAttr('disabled');
+			$("#courseinfo").removeAttr('disabled');
+			$("#workas").removeAttr('disabled');
+			$(hireform).data('bootstrapValidator').updateStatus('courseenroll', 'NOT_VALIDATED').validateField("courseenroll");
+			$(hireform).data('bootstrapValidator').updateStatus('courseinfo', 'NOT_VALIDATED').validateField("courseinfo");
+			$(hireform).data('bootstrapValidator').updateStatus('workas', 'NOT_VALIDATED').validateField("workas");
+		}
+	});
+
+	$("#MAR").change( function(e){
+		if($(this).val() == 'No'){
+			alert("If academic requirements are not met, student may be hired as a temporary employee, see temporary employee section. ")
+			$("#undergrad").hide();
+			$("#temp").show();
+		}
+	});
+	$("#currentenrollment").change( function(e){
+		if($(this).val() < '6'){
+			alert("If academic requirements are not met, student may be hired as a temporary employee, see temporary employee section. ")
+			$("#undergrad").hide();
+			$("#temp").show();
+		}
+	});
+
+	function checkUnderFund(value, validator){
+		var $groups = $('#hireform').find('.undergroup'),
+		        total   = $groups.length;
+		    // If all elements are empty, then return false
+		    if ($groups.filter(function() { return $(this).val() === ''; }).length === total)
+		    {
+		        return false;
+		    } else {
+		        // Update the status of this validator to all fields
+		        $groups.each(function() {
+		            validator.updateStatus($(this).attr('name'), validator.STATUS_VALID, 'callback');
+		        });
+
+		        // Otherwise, returns true
+		        return true;
+		    }
+	};
+
+	function checkGradFund(value, validator){
+		var $groups = $('#hireform').find('.gradgroup'),
+		        total   = $groups.length;
+		    // If all elements are empty, then return false
+		    if ($groups.filter(function() { return $(this).val() === ''; }).length === total)
+		    {
+		        return false;
+		    } else {
+		        // Update the status of this validator to all fields
+		        $groups.each(function() {
+		            validator.updateStatus($(this).attr('name'), validator.STATUS_VALID, 'callback');
+		        });
+
+		        // Otherwise, returns true
+		        return true;
+		    }
+	};
+
+	function checkTempFund(value, validator){
+		var $groups = $('#hireform').find('.tempgroup'),
+		        total   = $groups.length;
+		    // If all elements are empty, then return false
+		    if ($groups.filter(function() { return $(this).val() === ''; }).length === total)
+		    {
+		        return false;
+		    } else {
+		        // Update the status of this validator to all fields
+		        $groups.each(function() {
+		            validator.updateStatus($(this).attr('name'), validator.STATUS_VALID, 'callback');
+		        });
+
+		        // Otherwise, returns true
+		        return true;
+		    }
+	};
+
+	$(document).ready(function() {
+	    $('#hireform').bootstrapValidator({
+	        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+	        feedbackIcons: {
+	            valid: 'glyphicon glyphicon-ok',
+	            invalid: 'glyphicon glyphicon-remove',
+	            validating: 'glyphicon glyphicon-refresh'
+	        },
+	        fields: {
+	            name: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The student name is required and cannot be empty'
+	                    },
+	                }
+	            },
+	            idnum: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The student id number is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            email: {
+	                validators: {
+	                    emailAddress: {
+                        	message: 'The value is not a valid email address'
+                    		}
+	                }
+	            },
+	            hours: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The hours per week is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            startdate: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The starte date is required and cannot be empty'
+	                    },
+	                    date: {
+	                        format: 'MM/DD/YYYY', 
+	                        message: 'The date is not valid'
+	                    }
+	                }
+	            },
+	            enddate: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The end date is required and cannot be empty'
+	                    },
+	                    date: {
+	                        format: 'MM/DD/YYYY', 
+	                        message: 'The date is not valid'
+	                    }
+	                }
+	            },
+	            studentstatus: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The student status is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            uaaprev: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The description of previous employment is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            hiretype: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The hire type is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            collegelevel: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The student college level is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            tempselect: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The temporary employee selection is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            ta: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The teaching assistant selection is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            courseenroll: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The course enrollment total is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            courseinfo: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The course information is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            workas: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The student work as selection is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            studentposition: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The student position required and cannot be empty'
+	                    }
+	                }
+	            },
+	            currentenrollment: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The current enrollment credit hours are required and cannot be empty'
+	                    }
+	                }
+	            },
+	            MAR: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The meets academic requirements selection is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            underfund1: {
+	                validators: {
+	                	callback: {
+	                		message: 'The Fund/Org# 1 or Fund/Org# 2  is required and cannot be empty',
+	                		callback: function (value, validator) {
+	                			return checkUnderFund(value, validator);
+	                		}
+	                	}
+	                }
+	            },
+	            underfund2: {
+	                validators: {
+	                  	callback: {
+	                		 message: 'The Fund/Org# 1 or Fund/Org# 2  is required and cannot be empty',
+	                		callback: function (value, validator) {
+	                			return checkUnderFund(value, validator);
+	                		}
+	                	}
+	                }
+	            },
+	            EV: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The employment vaerification selecton is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            underdesc: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The description of duties is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            gradassign: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The graduate assignment is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            stipend: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The stipend selection is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            tuition: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The tuition selection is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            coursefees: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The course fees selection is required and cannot be empty'
+	                    }
+	                }
+	            },
+		gradfund1: {
+	                validators: {
+	                	callback: {
+	                		message: 'The Fund/Org# 1 or Fund/Org# 2  is required and cannot be empty',
+	                		callback: function (value, validator) {
+	                			return checkGradFund(value, validator);
+	                		}
+	                	}
+	                }
+	            },
+	            gradfund2: {
+	                validators: {
+	                    callback: {
+	                		message: 'The Fund/Org# 1 or Fund/Org# 2  is required and cannot be empty',
+	                		callback: function (value, validator) {
+	                			return checkGradFund(value, validator);
+	                		}
+	                	}
+	                }
+	            },
+	            healthins: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The health insurance selection is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            graddesc: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The description of duties is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            jobtitle: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The job title is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            tempfund1: {
+	                validators: {
+	                	callback: {
+	                		message: 'The Fund/Org# 1 or Fund/Org# 2  is required and cannot be empty',
+	                		callback: function (value, validator) {
+	                			return checkTempFund(value, validator);
+	                		}
+	                	}
+	                }
+	            },
+	            tempfund2: {
+	                validators: {
+	                    callback: {
+	                		message: 'The Fund/Org# 1 or Fund/Org# 2  is required and cannot be empty',
+	                		callback: function (value, validator) {
+	                			return checkTempFund(value, validator);
+	                		}
+	                	}
+	                }
+	            },
+	            grade: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The grade is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            step: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The step is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            hourltyrate: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The hourly rate is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            tempdesc: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The description of duties is required and cannot be empty'
+	                    }
+	                }
+	            },
+	            supervisor: {
+	                validators: {
+	                    notEmpty: {
+	                        message: 'The supervisor name is required and cannot be empty'
+	                    }
+	                }
+	            },
+	        }
+	    })
+                .on('success.form.bv', function(e){
+                    e.preventDefault();
+                    // createPDF();
+                });
+	});
+
+</script>
