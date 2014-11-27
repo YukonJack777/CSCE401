@@ -21,10 +21,10 @@ legend{
 <head>
 	<title>UAA COE: Student Employment Form</title>
 </head>
-<center><img src="/bootstrap/img/UAA-EngineeringLogos_GreenGold.jpg" alt="UAA-EngineeringLogos_GreenGold.jpg" width="940px" height="250px" ></center>
+<div class="container" style="margin-top:50px">
+<center><img src="/bootstrap/img/UAA-EngineeringLogos_GreenGold.jpg" alt="UAA-EngineeringLogos_GreenGold.jpg" width="100%" height="25%" ></center>
 <H1 style="text-align: center">Student, Temporary, or Graduate Employment Request Form </H1>
 <H6 style="text-align: center; color:red">All fields marked with an asterisk (*) are required.</H6>
-<div class="container" style="margin-top:50px">
 	<form class="form-horizontal" id="hireform">
 		<fieldset>
 			<legend>General Information</legend>
@@ -397,6 +397,7 @@ legend{
 	var date = new Date();
 	var currdate= (date.getMonth()+ 1) + '/' + date.getDate() + '/' + date.getFullYear();
 	$("#datesubmit").val(currdate);
+	
 	$(function() {
     		$( "#datepicker" ).datepicker({
       			showOn: "button",
