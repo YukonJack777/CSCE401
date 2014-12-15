@@ -58,15 +58,6 @@ legend{
 						<input type="text" class="form-control" placeholder="Enter # of hours/week"  name="hours" required/>
 					</div>
 				</div>
-<!-- 
-				<div class="form-group required" >
-					<label for="name" class="col-xs-4 control-label">Start Date: </label>
-					<div class="col-xs-8">
-						<div class="input-group date">
-							<input type="text" class="form-control" placeholder="Enter Start Date" name="startdate" id="datepicker" required/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-						</div>
-					</div>
-				</div> -->
 				<div class="form-group required">
 			                    	<label for="name" class="col-xs-4 control-label">Start Date: </label>
 			                    	<div class="col-xs-8">
@@ -92,8 +83,13 @@ legend{
 						<option value="" disabled selected>Select option</option>
 						<option>Domestic</option>
 						<option>International</option>
-			 			<option>Visa</option>
 					</select>
+				</div>
+			</div>
+			<div class="form-group" >
+				<label for="name" class="col-xs-4 control-label">If International, Type of Visa: </label>
+				<div class="col-xs-8">
+					<input type="text" class="form-control" id="visatype" placeholder="If International, Enter type of Visa:"  name="visatype"/>
 				</div>
 			</div>
 
@@ -117,22 +113,13 @@ legend{
 			</div>
 
 			<div class="form-group required">
-				<label for="collegelevel" class="col-xs-4 control-label">College Level: </label>
+				<label for="employtype" class="col-xs-4 control-label">Type of employment: </label>
 				<div class="col-xs-8">
-					<select class="form-control" id="collegelevel" name="collegelevel">
+					<select class="form-control" id="employtype" name="employtype">
 						<option value="" disabled selected>Select option</option>
 		  				<option value="Undergraduate">Undergraduate</option>
 		  				<option value="Graduate">Graduate</option>
-					</select>
-				</div>
-			</div>
-			<div class="form-group required" >
-				<label for="tempselect" class="col-xs-4 control-label">Temporary Employee: </label>
-				<div class="col-xs-8">
-					<select class="form-control" id="tempselect" name="tempselect">
-		  				<option value="" disabled selected>Select option</option>
-		  				<option value="No">No</option>
-		  				<option value="Yes">Yes</option>
+		  				<option value="Temporary">Temporary</option>
 					</select>
 				</div>
 			</div>
@@ -191,7 +178,7 @@ legend{
 				            <div class="form-group required">
 					                    <label for="name" class="col-xs-4 control-label">Current Enrollment</label>
 					                    <div class="col-xs-8">
-					                        	<input type="text" class="form-control" placeholder="Enter current enrollment" name="currentenrollment" id="currentenrollment" required/>
+					                        	<input type="text" class="form-control" placeholder="Enter current enrollment" name="currentenrollment" id="currentenrollment" min="6" required/>
 					                    </div>
 				            </div>
 					<div class="form-group required">
@@ -231,7 +218,7 @@ legend{
 					</div>
 			            </div>
 			            <div class="form-group required">
-					<label for="name" class="col-xs-4 control-label">Descrition Of Duties:</label>
+					<label for="name" class="col-xs-4 control-label">Description Of Duties:</label>
 					<div class="col-xs-8">
 						<textarea class="form-control" rows="3" name="underdesc" required></textarea>
 					</div>
@@ -305,7 +292,7 @@ legend{
 					</div>
 				 </div>
 			            <div class=" col-xs-12 form-group required">
-					<label for="name" class="col-xs-4 control-label">Descrition Of Duties:</label>
+					<label for="name" class="col-xs-4 control-label">Description Of Duties:</label>
 					<div class="col-xs-8">
 						<textarea class="form-control" rows="3" name="graddesc" required></textarea>
 					</div>
@@ -357,7 +344,7 @@ legend{
 				            </div>
 				 </div>
 			            <div class=" col-xs-12 form-group required">
-					<label for="name" class="col-xs-4 control-label">Descrition Of Duties:</label>
+					<label for="name" class="col-xs-4 control-label">Description Of Duties:</label>
 					<div class="col-xs-8">
 						<textarea class="form-control" rows="3" name="tempdesc" required></textarea>
 					</div>
@@ -435,25 +422,21 @@ legend{
 		$("#temp").hide();
 	});
 
-	$("#collegelevel").on("change", function(e){
+	$("#employtype").on("change", function(e){
 		if($(this).val() == 'Undergraduate'){
 			$("#graduate").hide();
+			$("#temp").hide();
 			$("#undergrad").show();
 		}
 		else if($(this).val() == 'Graduate'){
 			$("#undergrad").hide();
+			$("#temp").hide();
 			$("#graduate").show();
 		}
-	});
-
-	$("#tempselect").on("change", function(e){
-		if($(this).val() == 'Yes'){
-			$("#graduate").hide();
+		else if($(this).val() == 'Temporary'){
 			$("#undergrad").hide();
+			$("#graduate").hide();
 			$("#temp").show();
-		}
-		if($(this).val() == 'No'){
-			$("#temp").hide();
 		}
 	});
 
@@ -480,15 +463,13 @@ legend{
 	$("#MAR").change( function(e){
 		if($(this).val() == 'No'){
 			alert("If academic requirements are not met, student may be hired as a temporary employee, see temporary employee section. ")
-			$("#undergrad").hide();
-			$("#temp").show();
+			$("#employtype").val('Temporary').change();
 		}
 	});
 	$("#currentenrollment").change( function(e){
-		if($(this).val() < '6'){
+		if($(this).val() < 6){
 			alert("If academic requirements are not met, student may be hired as a temporary employee, see temporary employee section. ")
-			$("#undergrad").hide();
-			$("#temp").show();
+			$("#employtype").val('Temporary').change();
 		}
 	});
 
@@ -626,17 +607,10 @@ legend{
 	                    }
 	                }
 	            },
-	            collegelevel: {
+	            employtype: {
 	                validators: {
 	                    notEmpty: {
-	                        message: 'The student college level is required and cannot be empty'
-	                    }
-	                }
-	            },
-	            tempselect: {
-	                validators: {
-	                    notEmpty: {
-	                        message: 'The temporary employee selection is required and cannot be empty'
+	                        message: 'The employee type is required and cannot be empty'
 	                    }
 	                }
 	            },
